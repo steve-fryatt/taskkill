@@ -1,74 +1,94 @@
+<document title="MkResApps">
+<define name="version" value="1.10">
+<define name="date" value="6 December 2002" length=30 align="right">
+
+
+
+
+
+<literal mode="Text">
 =============================================================================
-TaskKill - Kill Wimp tasks from the Command Line                 Version 1.01
+TaskKill - Kill Wimp tasks from the Command Line                 Version $$version$$
 
-(C) Stephen Fryatt, 1999                                          20 May 2001
+(c) Stephen Fryatt, 1999                       $$date$$
 =============================================================================
+</literal>
 
 
-License
--------
-
-TaskKill is FREEWARE.  Copyright is held by the author, Stephen Fryatt, 2001.
-
-TaskKill may be copied freely, so long as it remains unaltered with all
-its files and documentation intact.
-
-If you wish to distribute TaskKill, please contact me to get my
-permission. This is so that I can ensure that you have the latest version
-available. TaskKill may not be sold, although Public Domain libraries may
-charge for the cost of discs.
-
-No guarantee is made as to the suitability or stability of TaskKill for
-any particular purpose.  No liability can be accepted by the author for
-any problems or damage caused by the use of TaskKill.
 
 
-Introduction
-------------
 
-TaskKill is a small BASIC utility that allows you to kill Wimp tasks from
-the Command line.
+<chapter title="License" file="License">
 
+<cite>TaskKill</cite> is <strong>Freeware</strong>.  Copyright is held by the author, Stephen Fryatt, 2001.
 
-Installing and Using TaskKill
------------------------------
+<cite>TaskKill</cite> may be copied freely, so long as it remains unaltered with all its files and documentation intact.
 
-TaskKill requires RISC OS 3 or later.  It can be run off a hard disc or
-floppy disc (but is probably useless off floppy).
+If you wish to distribute <cite>TaskKill</cite>, please contact me to get my permission. This is so that I can ensure that you have the latest version available.  <cite>TaskKill</cite> may not be sold, although Public Domain libraries may charge for the cost of discs.
 
-To install TaskKill, copy it into your library (or anywhere on <Run$Path>).
-On a RiscPC or later, this may be !Boot.Library unless you have made other
-arrangements.
+No guarantee is made as to the suitability or stability of <cite>TaskKill</cite> for any particular purpose.  No liability can be accepted by the author for any loss or damage caused by the use of <cite>TaskKill</cite>.
 
-It is now possible to type *TaskKill <taskname> from the command line to
-kill the corresponding task.  <taskname> is the name listed in the task
-Manager window (is the name contains spaces, include it in double quotes:
-"Impression Publisher").
+</chapter>
 
 
-Version History
----------------
 
-1.00 (05 February 1999)
+<chapter title="Introduction" file="Intro">
 
-   * First released version.
+<cite>TaskKill</cite> is a small BASIC utility that allows you to kill Wimp tasks from the Command line.
 
-1.01 (20 May 2001)
+</chapter>
 
-   * Made FNto_Upper use correct Territory interface.
-   * Fixed possible string overflow bug.
-   * Corrected documentation.
-   * Now works from command line, window or Obey file.
+
+
+
+
+<chapter title="Installing and Using TaskKill" file="Use">
+
+<cite>TaskKill</cite> requires RISC&nbsp;OS&nbsp;3 or later.  It can be run off a hard disc or floppy disc (but is probably useless off floppy).
+
+To install <cite>TaskKill</cite>, copy it into your library (or anywhere on &lt;Run$Path&gt;). On a RiscPC or later, this may be <file>!Boot.Library</file> unless you have made other arrangements.
+
+It is now possible to type <command>*TaskKill &lt;taskname&gt;</command> from the command line to kill the corresponding task. &lt;taskname&gt; is the name listed in the Task Manager window (if the name contains spaces, include it in double quotes: &quot;Impression Publisher&quot;).
+
+</chapter>
+
+
+
+
+<chapter title="Version History" file="History">
+
+<subhead title="1.00 (05 February 1999)">
+
+<list>
+<li>First released version.
+</list>
+
+
+<subhead title="1.01 (20 May 2001)">
+
+<list>
+<li>Made <code>FNto_upper</code> use correct Territory interface.
+<li>Fixed possible string overflow bug.
+<li>Corrected documentation.
+<li>Now works from command line, window or Obey file.
+</list>
+
+</chapter>
+
+
+<literal mode="Text">
 
 
 Updates and Contacting Me
 -------------------------
 
-If you have any comments about TaskKill, or would like to report any bugs
-that you find, you can email me at the address below.
+  If you have any comments about TaskKill, or would like to report any bugs
+  that you find, you can email me at the address below.
 
-Updates to TaskKill and more programs for RISC OS computers can be found
-on my website at http://www.stevefryatt.org.uk/software/
+  Updates to TaskKill and more programs for RISC OS computers can be found
+  on my website at http://www.stevefryatt.org.uk/software/
 
-Stephen Fryatt
-email: steve@stevefryatt.org.uk
+  Stephen Fryatt
+  email: steve@stevefryatt.org.uk
+</literal>
+
