@@ -1,0 +1,74 @@
+=============================================================================
+TaskKill - Kill Wimp tasks from the Command Line                 Version 1.01
+
+(C) Stephen Fryatt, 1999                                          20 May 2001
+=============================================================================
+
+
+License
+-------
+
+TaskKill is FREEWARE.  Copyright is held by the author, Stephen Fryatt, 2001.
+
+TaskKill may be copied freely, so long as it remains unaltered with all
+its files and documentation intact.
+
+If you wish to distribute TaskKill, please contact me to get my
+permission. This is so that I can ensure that you have the latest version
+available. TaskKill may not be sold, although Public Domain libraries may
+charge for the cost of discs.
+
+No guarantee is made as to the suitability or stability of TaskKill for
+any particular purpose.  No liability can be accepted by the author for
+any problems or damage caused by the use of TaskKill.
+
+
+Introduction
+------------
+
+TaskKill is a small BASIC utility that allows you to kill Wimp tasks from
+the Command line.
+
+
+Installing and Using TaskKill
+-----------------------------
+
+TaskKill requires RISC OS 3 or later.  It can be run off a hard disc or
+floppy disc (but is probably useless off floppy).
+
+To install TaskKill, copy it into your library (or anywhere on <Run$Path>).
+On a RiscPC or later, this may be !Boot.Library unless you have made other
+arrangements.
+
+It is now possible to type *TaskKill <taskname> from the command line to
+kill the corresponding task.  <taskname> is the name listed in the task
+Manager window (is the name contains spaces, include it in double quotes:
+"Impression Publisher").
+
+
+Version History
+---------------
+
+1.00 (05 February 1999)
+
+   * First released version.
+
+1.01 (20 May 2001)
+
+   * Made FNto_Upper use correct Territory interface.
+   * Fixed possible string overflow bug.
+   * Corrected documentation.
+   * Now works from command line, window or Obey file.
+
+
+Updates and Contacting Me
+-------------------------
+
+If you have any comments about TaskKill, or would like to report any bugs
+that you find, you can email me at the address below.
+
+Updates to TaskKill and more programs for RISC OS computers can be found
+on my website at http://www.stevefryatt.org.uk/software/
+
+Stephen Fryatt
+email: steve@stevefryatt.org.uk

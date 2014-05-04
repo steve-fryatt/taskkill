@@ -1,0 +1,96 @@
+REM >TaskKill
+REM
+REM (c) Stephen Fryatt, 1999
+REM 1.01 (20 May 2001)
+REM
+REM Kill a named WIMP task from the command line.
+:
+ON ERROR PRINT REPORT$+" at line "+STR$(ERL) : END
+:
+REM Get the command line arguments and decode them into various filenames and flags.
+:
+SYS "OS_GetEnv" TO environment$
+environment$=MID$(environment$,INSTR(environment$,"""",INSTR(environment$,"""")+1)+1)
+:
+buffer_size%=4095
+DIM b% buffer_size%
+:
+keyword_defs$="task=in/A/G,pre/S"+CHR$(0)
+SYS "OS_ReadArgs",keyword_defs$,environment$,b%,buffer_size%
+:
+send_pre_quit%=(b%!4<>0)
+:
+IF !b%=0 THEN ERROR 255,"No task was specified"
+task$=FNto_upper(FNgstransd_string(!b%))
+:
+next_task%=0
+found%=FALSE
+:
+REPEAT
+ SYS "TaskManager_EnumerateTasks",next_task%,b%,16 TO next_task%
+ name$=FNto_upper(FNzero_string(b%!4))
+ IF name$=task$ THEN found%=TRUE : task_handle%=!b%
+UNTIL next_task%<0 OR found%
+:
+IF found% THEN
+ SYS "XWimp_Initialise",200,&4B534154,"Task Kill" TO ;flags%
+ wimp_task%=((flags% AND 1)=0)
+ !b%=20
+ b%!12=0
+ b%!16=0
+ SYS "Wimp_SendMessage",17,b%,task_handle%
+ IF wimp_task% THEN SYS "Wimp_CloseDown"
+ENDIF
+END
+:
+:
+:
+:
+DEF FNzero_string(string%)
+:
+REM Return as a BASIC string a zero terminated string.
+:
+LOCAL string$
+:
+WHILE ?string%>=32
+ string$+=CHR$(?string%)
+ string%+=1
+ENDWHILE
+=string$
+:
+:
+:
+:
+DEF FNgstransd_string(string%)
+:
+REM Return as a BASIC string a GSTrans formatted string (two byte length followed by
+REM unterminated string).
+:
+LOCAL string$,length%,ptr%
+:
+length%=((?string%)+((string%?1)<<8))-1
+IF length%>255 THEN length%=255
+string%+=2
+:
+FOR ptr%=0 TO length%
+ string$+=CHR$(string%?ptr%)
+NEXT ptr%
+=string$
+:
+:
+:
+:
+DEF FNto_upper(string$)
+:
+REM Force a string to upper case.
+:
+LOCAL loop%,char%,table%
+:
+SYS "Territory_UpperCaseTable",-1 TO table%
+:
+FOR loop%=1 TO LEN(string$)
+ char%=ASC(MID$(string$,loop%,1))
+ MID$(string$,loop%,1)=CHR$(table%?char%)
+NEXT loop%
+:
+=string$
