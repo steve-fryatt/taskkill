@@ -78,6 +78,15 @@ It is now possible to type <command>*TaskKill &lt;taskname&gt;</command> from th
 <li>Now works from command line, window or Obey file.
 </list>
 
+
+<subhead title="Test Build">
+
+Development release for testing and feedback.
+
+<list>
+<li>Converted source to generic build system usning Tokenize.
+</list>
+
 </chapter>
 
 
