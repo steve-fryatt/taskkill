@@ -48,7 +48,7 @@ The necessary libraries and build tools can be found at <link ref="#url http://w
 
 <chapter title="Installing and Using TaskKill" file="Use">
 
-<cite>TaskKill</cite> requires RISC&nbsp;OS&nbsp;3 or later.  It can be run off a hard disc or floppy disc (but is probably useless off floppy).
+<cite>TaskKill</cite> requires RISC&nbsp;OS&nbsp;3 or later. It can be run off a hard disc or floppy disc (but is probably useless off floppy).
 
 To install <cite>TaskKill</cite>, copy it into your library (or anywhere on &lt;Run$Path&gt;). On a RiscPC or later, this may be <file>!Boot.Library</file> unless you have made other arrangements.
 
@@ -66,6 +66,7 @@ It is now possible to type <command>*TaskKill &lt;taskname&gt;</command> from th
 <list>
 <li>First released version.
 </list>
+
 
 
 <subhead title="1.01 (20 May 2001)">
