@@ -77,7 +77,7 @@ ZIPFLAGS := -x "*/.svn/*" -r -, -9
 SRCZIPFLAGS := -x "*/.svn/*" -r -9
 BUZIPFLAGS := -x "*/.svn/*" -r -9
 BINDHELPFLAGS := -f -r -v
-TOKFLAGS := -verbose
+TOKFLAGS := -verbose -warn p
 
 
 # Set up the various build directories.
